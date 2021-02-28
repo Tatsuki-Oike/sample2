@@ -1,0 +1,20 @@
+#sidebar{
+    background: black;
+}
+
+#postamble{
+    background: yellow;
+    border-top: yellow;
+}
+
+.title{
+    color: gray;
+}
+
+#sidebar h2{
+    background-color: green;
+}
+
+h1, h2, h3, h4, h5, h6, legend{
+    color: lime;
+}

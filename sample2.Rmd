@@ -1,0 +1,93 @@
+---
+title: "sample2"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    css: sample2.2.css
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+<!--コメント-->
+
+# タイトル1
+
+<!--水平線-->
+
+--- 
+
+<br> <!--改行-->
+
+## サブタイトル1.1 (文章)
+
+通常の文章
+<span style="color:blue"> 青色 </span> 
+**強調**
+
+<br> <!--改行-->
+
+## サブタイトル1.2 (箇条書き)
+
+- 箇条書き1
+    - 箇条書き1.1
+    - 箇条書き1.2
+- 箇条書き2
+    * 箇条書き2.1
+    * 箇条書き2.2
+
+<br> <!--改行-->
+
+## サブタイトル1.3 (表作成)
+
+|a|b|c|
+|----|----|----|
+|1|2|3|
+|4|5|6|
+
+<br> <!--改行-->
+
+
+
+
+
+# タイトル2{.tabset}
+
+<!--水平線-->
+
+--- 
+
+<br> <!--改行-->
+
+## サブタイトル2.1 (rコード)
+
+```{r, message=FALSE}
+library(dplyr)
+iris %>% head()
+```
+
+<br> <!--改行-->
+
+## サブタイトル2.2 (rコード 表関数使用)
+
+```{r}
+library(knitr)
+iris %>% head() %>% kable()
+```
+
+<br> <!--改行-->
